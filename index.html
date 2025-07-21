@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Note-Key</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Note-Key</h1>
+  <div class="top-inputs">
+    <div class="small-input">
+      <label for="bpm">BPM</label>
+      <input type="text" id="bpm" placeholder="120" maxlength="5" />
+    </div>
+    <div class="small-input">
+      <label for="key">Key</label>
+      <input type="text" id="key" placeholder="C#m" maxlength="4" />
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <label for="composer">Compositor:</label>
+    <input type="text" id="composer" placeholder="Nombre del compositor" />
+
+    <label for="details">Notas / Detalles:</label>
+    <textarea id="details" placeholder="Aquí puedes escribir notas adicionales..."></textarea>
+
+    <label for="audioFile">Cargar archivo de audio:</label>
+    <input type="file" id="audioFile" accept="audio/*" />
+
+    <div class="audio-player">
+      <button id="playBtn">▶️ Play</button>
+      <button id="pauseBtn">⏸️ Pause</button>
+      <button id="stopBtn">⏹️ Stop</button>
+      <button id="backBtn">⏮️ -5s</button>
+      <button id="forwardBtn">⏭️ +5s</button>
+    </div>
+
+    <audio id="audio" controls style="width: 100%; margin-top: 0.5rem; display:none;"></audio>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
